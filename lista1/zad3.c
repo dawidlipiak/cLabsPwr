@@ -1,3 +1,4 @@
+// Dawid Lipiak zadanie 3 lista 1
 #include <stdio.h>
 
 int main(void)

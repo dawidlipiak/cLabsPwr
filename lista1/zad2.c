@@ -1,3 +1,4 @@
+// Dawid Lipiak Zadanie 2 lista 1
 #include <stdio.h>
 #include <math.h>
 

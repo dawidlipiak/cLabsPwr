@@ -1,3 +1,4 @@
+//Dawid Lipiak Zadanie 1 lista 1
 #include <stdio.h>
 
 int main(int argc, char *argv[])
