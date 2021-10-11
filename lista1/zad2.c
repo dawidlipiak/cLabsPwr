@@ -34,5 +34,9 @@ int main(void)
         x2 = (-1*b+(sqrt(delta)))/2*a;
 
         printf("Sa dwa rozwiazania rownania x1 = %.2f i x2 = %.2f\n", x1, x2);
+
     }
+    return 0;
+
 }
+
