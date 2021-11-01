@@ -13,6 +13,6 @@ int main (void)
         wyrazenie = wyrazenie + (double)1/n;
     }
  
-        printf("%d", n);
+        printf("%d\n", n);
     return 0;
 }
