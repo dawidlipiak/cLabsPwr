@@ -20,26 +20,18 @@ int doskonala(int a)
     return suma;
 }
 
-/*bool zaprzyjazniona (int a, int b)
-{
-    
-    if ( doskonala(a) == doskonala (doskonala(a)) )
-    {
-        return true;
-    }
-
-    return false;
-}
-*/
 
 int main (void)
-{
+{   
+    int doskonaleLiczby[1000];
     printf("Liczby doskonale:\n");
     
     //wyswietlanie liczb doskonalych mniejszych od 1000
     for (int i = 1; i < 1000; i++)
     {
-        if(doskonala(i) == i)
+        doskonaleLiczby[i-1] = doskonala(i);
+
+        if( doskonaleLiczby[i-1] == i)
         {
             printf("%d ", i); 
         }
@@ -50,19 +42,11 @@ int main (void)
     //wyswietlanie liczb zaprzyjanionych mniejszych od 1000
     for(int i = 1; i < 1000; i++)
     {
-        if( i == doskonala( doskonala(i)) && i < doskonala(i) )
+        if( i == doskonala(doskonaleLiczby[i-1]) && i < doskonaleLiczby[i-1] )
         {
-            printf("(%d,%d) ", i, doskonala(i) );
+            printf("(%d,%d) ", i, doskonaleLiczby[i-1] );
         }   
     }
-
-
-
-
-
-
-
-
 
 
     return 0;

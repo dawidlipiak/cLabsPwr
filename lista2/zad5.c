@@ -26,12 +26,19 @@ int main (void)
 
     int licznik;
 
+    //Utworzenie pliku wykres.csv
+    FILE * fp;
+    fp = fopen("wykres.csv","w");
+    
     for(int i = 1; i <= n; i++)
     {
         licznik = 0;
-
-        printf("%d; ", i);
-
+        
+        //wypisanie wiersza
+        fprintf(fp,"%d;", i);
+	    
+        
+        //petla sprawdzajaca wszystkie pary liczb od (1,1) do (n,n)
         for(int j = 1; j <= i; j++)
         {
             for(int k = 1; k <= i; k++)
@@ -41,29 +48,14 @@ int main (void)
                     licznik++;
                 }
             }
-            
         }
         
-        printf("%lf\n", (double)(licznik/pow(i,2))); 
+       //zapisanie wartosci obliczenia 
+       fprintf(fp,"%lf\n", (double)(licznik/pow(i,2)));
 
     }
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //zamkniecie pliku
+    fclose(fp);
 
     return 0;
 }
