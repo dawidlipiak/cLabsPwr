@@ -6,7 +6,5 @@
 
 void west(struct agent *a)
 {
-    int x = *a.positionX;
-    int y = *a.positionY
-    *a.position = {x-1,y};
+    a->positionX -= 1;
 }

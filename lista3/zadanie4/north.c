@@ -4,9 +4,7 @@
 #include <stdio.h>
 #include "agents.h"
 
-void north(struct agent *a)
+void north(agent_t *a)
 {
-    int x = *a.positionX;
-    int y = *a.positionY
-    *a.position = {x,y+1};
+    a->positionY += 1;
 }

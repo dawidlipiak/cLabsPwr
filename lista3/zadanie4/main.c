@@ -7,8 +7,17 @@
 
 int main (void)
 {
-    struct agent Bob = newagent(0,0);
-    north(&Bob);
+    struct agent Bob = newagent(0, 0);
+    struct agent Alice = newagent(3, 3);
+    
+    north (&Bob);
+    south (& Alice);
+    west(&Alice);
+    north (&Bob);
+    east(&Bob);
+    south (& Alice);
+    
+    printf("odległość = %f\n", distance(Bob , Alice));
 
-    printf("%d  %d", Bob.positionX, Bob.positionY);
+    return 0;
 }

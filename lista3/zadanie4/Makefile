@@ -1,7 +1,7 @@
 all: main
 
 main: main.o agents.o newagent.o north.o south.o east.o west.o distance.o
-	clang -o main main.o agents.o newagent.o north.o south.o east.o west.o distance.o
+	clang -lm -o main main.o agents.o newagent.o north.o south.o east.o west.o distance.o
 
 main.o: main.c
 	clang -c main.c
